@@ -73,11 +73,9 @@ descriptionInput.addEventListener('keydown', (e) => {
 })
 
 function waitToRemoveList(){
-    doneButton.forEach(element => {
-        element.addEventListener('click', (e) => {
+    doneButton[doneButton.length - 1].addEventListener('click', (e) => {
             console.log('done clicked');
             console.log('e.target', e.target.parentElement);
             e.target.parentElement.remove();
         })
-    });
-}
+    };
